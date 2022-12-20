@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkrifa_vue"]=self["webpackChunkrifa_vue"]||[]).push([[268],{2662:function(n,e,a){a.r(e),a.d(e,{default:function(){return m}});var r=a(3396),t=a.p+"img/RIFA.0c171a9e.png";const u={class:"container"},c=(0,r._)("h1",null,"GRAN RIFA !",-1),i=(0,r._)("img",{class:"mt-5",alt:"Vue logo",src:t},null,-1),s=[c,i];function l(n,e,a,t,c,i){return(0,r.wg)(),(0,r.iD)("div",u,s)}var o={name:"HomeView",components:{Navbar:(0,r.RC)((()=>a.e(493).then(a.bind(a,493))))}},f=a(89);const v=(0,f.Z)(o,[["render",l]]);var m=v}}]);
+//# sourceMappingURL=Home.91d253f5.js.map
