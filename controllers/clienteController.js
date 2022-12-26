@@ -129,7 +129,7 @@ const eliminarCliente = async ( req, res = response) => {
 const actualizarCliente = async ( req, res = response) => {
 
     try {
-        
+        console.log('entro en actualizar cliente')
         const {id} = req.params;
 
         let cliente = await clienteModel.findOne({_id:id})
@@ -140,6 +140,8 @@ const actualizarCliente = async ( req, res = response) => {
                 msg: 'Ese socio no existe'
             })
         }
+
+        console.log(req.body)
 
         await clienteModel.updateOne({_id:id}, req.body)
     

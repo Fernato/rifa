@@ -1,11 +1,13 @@
 const {Router} = require('express');
 
-const { crearNumero, getNumeros, getNumero, SeleccionarNumero, getNumerosCliente } = require('../controllers/numeroController');
+const { crearNumero, getNumeros, getNumero, SeleccionarNumero, getNumerosCliente, getIngresos } = require('../controllers/numeroController');
 const router = Router()
 
 router.post('/new', crearNumero)
 
 router.get('/', getNumeros)
+
+router.get('/ingresos', getIngresos)
 
 
 router.get('/:id', getNumero)

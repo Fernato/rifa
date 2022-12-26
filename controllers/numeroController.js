@@ -21,10 +21,13 @@ const getNumeros = async (req, res = response) => {
             return 0;
         })
 
+
         res.status(200).json({
             ok: true,
-            numeros
+            numeros,
         })
+
+
     } catch (error) {
         console.log(error)
         res.status(500).json({
@@ -160,6 +163,33 @@ const getNumerosCliente = async ( req, res = response) => {
     }
 }
 
+const getIngresos = async ( req, res = response) => {
+   
+    try {        
+      
+        const numeros = await numeroModel.find()
+
+        var ingresos = 0
+       numeros.forEach(n => {
+        if(n.total){
+            ingresos += n.total
+        }
+       });
+
+        res.status(200).json({
+            ok: true,
+            ingresos
+        })
+
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({
+            ok:false
+        })
+        
+    }
+}
+
 
 
 
@@ -169,6 +199,7 @@ module.exports = {
     getNumeros,
     getNumero,
     SeleccionarNumero,
-    getNumerosCliente
+    getNumerosCliente,
+    getIngresos
 
 }

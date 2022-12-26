@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkrifa_vue"]=self["webpackChunkrifa_vue"]||[]).push([[611],{2589:function(e,n,r){r.r(n),r.d(n,{default:function(){return f}});var s=r(3396),t=r(7139);const u=(0,s._)("h1",null,"CAJA",-1);function a(e,n,r,a,c,o){return(0,s.wg)(),(0,s.iD)(s.HY,null,[u,(0,s._)("h3",null,"Ingresos= $"+(0,t.zw)(e.ingresos),1)],64)}var c=r(65),o={computed:{...(0,c.Se)("caja",["ingresos"])},methods:{...(0,c.nv)("caja",["getIngresos"])},created(){this.getIngresos()}},i=r(89);const l=(0,i.Z)(o,[["render",a]]);var f=l}}]);
+//# sourceMappingURL=rifa-caja.958218f3.js.map

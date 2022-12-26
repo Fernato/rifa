@@ -22,6 +22,10 @@ const clienteSchema = Schema({
     
     direccion:{
         type: String,
+    },
+
+    diacobro:{
+        type: String
     }
     
 });
