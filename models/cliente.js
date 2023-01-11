@@ -19,7 +19,7 @@ const clienteSchema = Schema({
     celular:{
         type: String,
     },
-    
+
     direccion:{
         type: String,
     },
@@ -27,7 +27,7 @@ const clienteSchema = Schema({
     diacobro:{
         type: String
     }
-    
+
 });
 
 module.exports = model('clienteModel', clienteSchema);
