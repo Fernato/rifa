@@ -29,6 +29,7 @@ const getClientes = async (req, res = response) => {
     }
 
 }
+
 const getCliente = async ( req, res = response) => {
    
     try {        
@@ -158,11 +159,53 @@ const actualizarCliente = async ( req, res = response) => {
 
 }
 
+const getClientesDiaCobro = async (req, res = response) => {
+    
+    try {
+        
+        const clientes = await clienteModel.find();
+
+        let categorias = []
+
+        clientes.forEach(cli => {
+
+            if(!cli.diacobro){
+                cli.diacobro = 'por cobrar'
+            }
+           
+            let index = categorias.findIndex(dia => dia.nombre === cli.diacobro)
+
+            if(index != -1){
+                categorias[index].clientes.push(cli)
+            }else{
+                let dia = {
+                    nombre : cli.diacobro,
+                    clientes: [cli]
+                }
+                categorias.push(dia)
+            }
+            
+        });
+
+        res.status(200).json({
+            ok: true,
+            categorias
+        })
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({
+            ok:false
+        })
+    }
+
+}
+
 module.exports = {
     getClientes,
     getCliente,
     crearCliente,
     actualizarCliente,
     eliminarCliente,
+    getClientesDiaCobro
 
 }

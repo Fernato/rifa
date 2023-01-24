@@ -14,12 +14,13 @@ router.delete('/:id', eliminarFactura)
 
 router.put('/:id', actualizarFactura)
 
+router.get('/facturatotal', getFacturasTotal)
+
 /*
 router.get('/', getFacturas)
 
 
 
-router.get('/facturatotal', getFacturasTotal)
 
 
 router.get('/cuentasFacturasSoc', getCuentasIndividualesSocios)

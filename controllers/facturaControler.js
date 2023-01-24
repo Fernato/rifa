@@ -237,7 +237,7 @@ const actualizarFactura = async ( req, res = response) => {
 
 }
 
-/*
+
 const getFacturasTotal = async (req, res = response) => {
     
     try {
@@ -264,7 +264,7 @@ const getFacturasTotal = async (req, res = response) => {
     }
 
 }
-
+/*
 const getCuentasIndividualesSocios = async (req, res = response ) => {
     try {
         
@@ -323,9 +323,9 @@ module.exports = {
     getFacturasNumero,
     actualizarFactura,
     eliminarFactura,
+    getFacturasTotal,
     /*getFacturas,
     getFactura,
-    getFacturasTotal,
     getCuentasIndividualesSocios,
 */
 
